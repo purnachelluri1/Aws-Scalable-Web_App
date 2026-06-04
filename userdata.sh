@@ -9,4 +9,4 @@ systemctl enable docker
 
 docker pull vasuch2626/scalable-webapp:v3
 
-docker run -d -p 80:80 --restart always --name webapp vasuch2626/scalable-webapp:v3
+docker run -d -p 80:80 --restart always --name webapp vasuch2626/scalable-webapp:v4

@@ -112,6 +112,12 @@ def home():
     </body>
     </html>
     """
+@app.route("/health")
+def health():
+    return {
+        "status": "healthy",
+        "application": "cloud-dashboard"
+    }
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=80)
