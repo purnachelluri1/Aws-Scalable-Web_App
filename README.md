@@ -1,11 +1,16 @@
 # AWS Scalable Web Application using Terraform
 
-## Project Overview
+## Project Description
 
-This project demonstrates the deployment of a scalable and highly available web application on AWS using Terraform Infrastructure as Code (IaC).
+This project is a simple web application hosted on AWS using Terraform to set up all the cloud resources automatically.
 
-The infrastructure is designed following AWS best practices and includes networking, security, load balancing, and auto scaling components.
+The main idea of this project is to deploy a website in the cloud in a way that it can handle more users if traffic increases, without any manual changes. Instead of creating resources like servers and networks manually in AWS, everything is created using Terraform code.
 
+In this setup, AWS provides the cloud environment, and Terraform is used to build and manage that environment in an automated way. This makes the whole infrastructure easy to create, update, and delete whenever needed.
+
+The application runs on an EC2 instance, which acts like a virtual server in the cloud. Basic networking is handled using VPC, subnets, and security groups to make sure the application is both accessible and secure.
+
+Overall, this project shows how a normal web application can be deployed in a cloud environment in an automated and scalable way using DevOps tools like Terraform and AWS services.
 ## Architecture Components
 
 * Custom VPC
