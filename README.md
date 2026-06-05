@@ -113,6 +113,7 @@ terraform apply
 * Application Load Balancer
 * Auto Scaling Group
 * Git & GitHub
+* Docker
 
 ## Outcome
 
