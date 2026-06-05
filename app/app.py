@@ -7,13 +7,26 @@ app = Flask(__name__)
 
 def get_metadata(path):
     try:
-        return requests.get(
-            f"http://169.254.169.254/latest/meta-data/{path}",
+        token = requests.put(
+            "http://169.254.169.254/latest/api/token",
+            headers={
+                "X-aws-ec2-metadata-token-ttl-seconds": "21600"
+            },
             timeout=2
         ).text
-    except:
-        return "Unavailable"
 
+        response = requests.get(
+            f"http://169.254.169.254/latest/meta-data/{path}",
+            headers={
+                "X-aws-ec2-metadata-token": token
+            },
+            timeout=2
+        )
+
+        return response.text
+
+    except Exception as e:
+        return f"Error: {e}"
 @app.route("/")
 def home():
 
