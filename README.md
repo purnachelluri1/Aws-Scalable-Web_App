@@ -38,20 +38,42 @@ Overall, this project shows how a normal web application can be deployed in a cl
 
 ```text
 Scalable-Web-Application/
-│
-├── modules/
-│   ├── networking/
-│   ├── security/
-│   ├── bastion/
-│   ├── alb/
-│   └── autoscaling/
-│
-├── main.tf
-├── variables.tf
-├── terraform.tfvars
-├── provider.tf
-├── userdata.sh
-└── outputs.tf
+ .
+├──  !!!!!!!!!RealTimeProjFlowChart!!!!!!!.txt
+├──  app
+│   ├──  app.py
+│   ├──  Dockerfile
+│   └── 󰌠 requirements.txt
+├──  main.tf
+├──  modules
+│   ├──  alb
+│   │   ├──  main.tf
+│   │   ├──  output.tf
+│   │   └──  variables.tf
+│   ├──  autoscaling
+│   │   ├──  main.tf
+│   │   ├──  output.tf
+│   │   └──  variables.tf
+│   ├──  bastion
+│   │   ├──  main.tf
+│   │   ├──  output.tf
+│   │   └──  variables.tf
+│   ├──  networking
+│   │   ├──  main.tf
+│   │   ├──  output.tf
+│   │   └──  variables.tf
+│   └──  security
+│       ├──  main.tf
+│       ├──  output.tf
+│       └──  variables.tf
+├──  output.tf
+├──  provider.tf
+├──  README.md
+├──  terraform.tfstate
+├──  terraform.tfstate.backup
+├──  terraform.tfvars
+├──  userdata.sh
+└──  variables.tf
 ```
 
 ## Deployment Steps
